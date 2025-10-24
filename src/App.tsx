@@ -1,16 +1,30 @@
+import { BiSearch } from "react-icons/bi"; 
 import { useState } from 'react'
 import './style/App.css'
+import image1 from './assets/Images/img2.jpg'
+import Home from "./features/Main/Home";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className='grid grid-cols-6 grid-rows-[minmax(30px,8vh)_min(100vh)_minmax(100px,30vh)]'>
-        <div className='bg-lime-300 col-span-12 row-span-1'></div>
-        <div className='bg-pink-500 col-span-12 row-span-1'></div>
+      <div className=''>
+        <header className='bg-lime-300 h-[5dvh]'>
+          <div className="cabeçalho">
+            <img src="/assets/Logos/Bl/BL.webp" alt="" className="src" />
+            <label htmlFor="pesquisa">
+              <div className="caixa de pesquisa flex">
+                <input type="text" id="pesquisa"/>
+                <BiSearch />
+              </div>
+            </label>
+          </div>
+          <nav className='bg-lime-300 '></nav>
+        </header>
+        <Home/>
         {/* resolver o sidebar depois */}
-        <div className='bg-cyan-300 col-span-12 row-span-1'></div>
+        <footer className='bg-cyan-300 h-[40dvh]'>Footer</footer>
       </div>
     </>
   )

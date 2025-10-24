@@ -4,5 +4,12 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // root: 'src/', // Preciso indicar o local do arquivo html de inicio (index.html) para mudar o root
   plugins: [react(), tailwindcss()],
+  // TODO Alias por enquanto não tem muita vantagem, implementar corretamente ou configurar o root melhor
+  // resolve: {
+  //   alias: [
+  //     { find: '@', replacement: 'src' }
+  //   ]
+  // },
 })
