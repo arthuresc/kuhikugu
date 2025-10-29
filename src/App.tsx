@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <div className=''>
-        <header className='bg-lime-300 h-[5dvh]'>
+        <header className='bg-lime-400 h-[5dvh]'>
           <div className="cabeçalho">
             <img src="/assets/Logos/Bl/BL.webp" alt="" className="src" />
             <label htmlFor="pesquisa">
