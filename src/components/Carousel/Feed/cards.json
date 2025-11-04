@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "title": "Bolsa Organizadora",
+      "subTitle": "Excepteur consequat et laborum quis adipisicing culpa id et minim et proident occaecat occaecat fd.",
+      "defaultImg": "/src/components/Carousel/Feed/Images/Products/bolsa_organizadora/92574set.webp",
+      "hoverImg": "/src/components/Carousel/Feed/Images/Products/bolsa_organizadora/92574133logo.webp",
+      "link": "/",
+      "order": 0,
+      "cod": "00001"
+    },
+    {
+      "title": "Fone de Ouvido",
+      "subTitle": "Excepteur consequat et laborum quis adipisicing culpa id et minim et proident occaecat occaecat fd.",
+      "defaultImg": "/src/components/Carousel/Feed/Images/Products/fone_de_ouvido/mochilafuncionaldf4eb4024491ad9af8a320f8db244f3113b9114e.webp",
+      "hoverImg": "/src/components/Carousel/Feed/Images/Products/fone_de_ouvido/97956amb3.webp",
+      "link": "/",
+      "order": 0,
+      "cod": "00002"
+    },
+    {
+      "title": "Garrafa Bambu",
+      "subTitle": "Excepteur consequat et laborum quis adipisicing culpa id et minim et proident occaecat occaecat fd.",
+      "defaultImg": "/src/components/Carousel/Feed/Images/Products/garrafa_bambu/garrafaparededuplacomdetalhesembambupreta500ml24116.webp",
+      "hoverImg": "/src/components/Carousel/Feed/Images/Products/garrafa_bambu/garrafaparededuplacomdetalhesembambupreta500ml24118.webp",
+      "link": "/",
+      "order": 0,
+      "cod": "00003"
+    },
+    {
+      "title": "Kit Escritório",
+      "subTitle": "Excepteur consequat et laborum quis adipisicing culpa id et minim et proident occaecat occaecat fd.",
+      "defaultImg": "/src/components/Carousel/Feed/Images/Products/kit_escritorio/KitEscritorio4em18402d115374437892.webp",
+      "hoverImg": "/src/components/Carousel/Feed/Images/Products/kit_escritorio/KitEscritorio4em18402d11537443789.webp",
+      "link": "/",
+      "order": 0,
+      "cod": "00004"
+    },
+    {
+      "title": "Mala de Viagem",
+      "subTitle": "Excepteur consequat et laborum quis adipisicing culpa id et minim et proident occaecat occaecat fd.",
+      "defaultImg": "/src/components/Carousel/Feed/Images/Products/mala_viagem/MalaABS49Litros224541740580900.webp",
+      "hoverImg": "/src/components/Carousel/Feed/Images/Products/mala_viagem/MalaABS49Litros22454d51740580904.webp",
+      "link": "/",
+      "order": 0,
+      "cod": "00005"
+    },
+    {
+      "title": "Pochete",
+      "subTitle": "Excepteur consequat et laborum quis adipisicing culpa id et minim et proident occaecat occaecat fd.",
+      "defaultImg": "/src/components/Carousel/Feed/Images/Products/pochete/92388103g.webp",
+      "hoverImg": "/src/components/Carousel/Feed/Images/Products/pochete/92388103logo.webp",
+      "link": "/",
+      "order": 0,
+      "cod": "00006"
+    },
+    {
+      "title": "Suporte para Notebook",
+      "subTitle": "Excepteur consequat et laborum quis adipisicing culpa id et minim et proident occaecat occaecat fd.",
+      "defaultImg": "/src/components/Carousel/Feed/Images/Products/suporte_notebook/97136set.webp",
+      "hoverImg": "/src/components/Carousel/Feed/Images/Products/suporte_notebook/SuporteArticuladodeMetalParaNotebook22715d21744129682.webp",
+      "link": "/",
+      "order": 0,
+      "cod": "00007"
+    }
+  ]
+}
