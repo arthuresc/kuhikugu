@@ -4,11 +4,11 @@ import Slider from '../../components/Slider/Slider';
 
 function Home() {
   return (
-    <main className="bg-pink-500 overflow-hidden">
+    <main className="overflow-hidden">
       <div className="overflow-hidden">
         <Slider />
       </div>
-      <Carousel elements={4}/>
+      <Carousel elements={5}/>
     </main>
   );
 }
