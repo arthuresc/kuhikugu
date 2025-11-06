@@ -33,7 +33,7 @@ function Slider() {
   }
   return (
     <>
-      <SwipersButtons forward={changeImageForward} backward={changeImageBackward}>
+      <SwipersButtons forward={changeImageForward} backward={changeImageBackward} wrapper='relative overflow-visible h-[30dvh] sm:h-[40dvh] md:h-[45dvh] lg:h-[50dvh]'>
         <img src={Object.keys(images)[imgNum]} />
       </SwipersButtons>
     </>
@@ -41,3 +41,6 @@ function Slider() {
 }
 
 export default Slider;
+
+
+      // <div className="relative overflow-visible h-[30dvh] sm:h-[40dvh] md:h-[45dvh] lg:h-[50dvh]">

@@ -8,7 +8,7 @@ function Home() {
       <div className="overflow-hidden">
         <Slider />
       </div>
-      <Carousel elements={5}/>
+      <Carousel/>
     </main>
   );
 }

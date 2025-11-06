@@ -13,41 +13,51 @@ interface CarouselProps {
 const products: CardLayout[] = [...cards.products];
 
 function Carousel({ elements = 4 }: CarouselProps) {
-  const [controls, setControls] = useState({ first: 3, last: elements });
-  const [indexes, setIndexes] = useState([]);
+  // const [controls, setControls] = useState({ first: 0, last: 4 });
+  const [ start, setStart ] = useState(0)
+  const [ finish, setFinish ] = useState(elements)
+  const [indexes, setIndexes] = useState<CardLayout[]>([]);
 
-  const range = (size = 4, steps = 1) =>
-    Array.from({ length: Math.ceil(size - steps) }, (_, i) => steps + i);
+  // const range = (size = 7) =>
+  //   Array.from({ length: Math.ceil(size - 1) }, (_, i) => products[i]);
 
-  console.log(range(elements), '🐊');
+  const length: number = products.length;
+  let finalArray: CardLayout[] = [];
 
-  range();
-
+  let controls = { start: 0, finish: 4 };
   function aumentar() {
-    // setControls({ first: controls.first + 1, last: controls.last + 1 });
-    // setIndexes(range(elements));
-    console.log('aumentou')
-  }
-  function diminuir() {
-    // setControls({ first: controls.first - 1, last: controls.last - 1 });
-    // setIndexes(range(elements));
-    console.log('diminuiu')
+    debugger;
+    setStart(start + 1)
+    setFinish(finish + 1)
+    finalArray = [...products.slice(start, finish)];
+    console.log(finalArray, start, finish,'🛩️');
+    setIndexes([...finalArray]);
+    // console.log(indexes, indexes.length, '🛩️');
   }
 
-  // useEffect(() => {
-  //   // console.log(range(controls.first, controls.last), '🫠');
-  // });
+  function diminuir() {}
+
+  useEffect(() => {
+    if (indexes.length == 0) {
+      console.log(indexes, indexes.length, '✈️');
+      setIndexes([...products.slice(0, 4)]);
+    }
+    if(finish > length) {
+      console.log(finish, indexes.length, '🌹')
+      setIndexes(indexes.concat(products.slice(0, finish - length)))
+    }
+  });
   // HTMl
   return (
     <SwipersButtons forward={aumentar} backward={diminuir}>
       <>
-        {range(elements).map((item, index) => {
+        {indexes.map((item, index) => {
           return (
             <CarouselCard
-              key={item}
-              image={products[item].defaultImg}
-              title={products[item].title}
-              subTitle={products[item].subTitle}
+              key={index}
+              image={item.defaultImg}
+              title={item.title}
+              subTitle={item.subTitle}
             />
           );
         })}
