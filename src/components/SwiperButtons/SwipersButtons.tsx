@@ -22,14 +22,14 @@ function SwipersButtons({children, forward, backward, wrapper}: SwipersButtons) 
       <div className="absolute inset-0 pointer-events-none z-20 flex items-center justify-between">
         <button
           className="group pointer-events-auto h-full mix-blend-overlay hover:bg-black/30 active:bg-black/50 px-2 py-1"
-          onClick={(): void => backward()}
+          onClick={(): void => forward()}
 
         >
           <IoIosArrowBack className="mx-5 text-transparent group-hover:text-gray-400 group-active:text-gray-400" />
         </button>
         <button
           className="group pointer-events-auto h-full mix-blend-overlay hover:bg-black/30 active:bg-black/50 px-2 py-1"
-          onClick={(): void => forward()}
+          onClick={(): void => backward()}
         >
           <IoIosArrowForward className="mx-5 text-transparent  group-hover:text-gray-400 group-active:text-gray-400" />
         </button>
