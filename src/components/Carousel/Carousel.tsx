@@ -23,7 +23,7 @@ function Carousel({ elements = 4 }: CarouselProps) {
   const length: number = products.length;
 
   function aumentar() {
-    debugger;
+    // debugger;
     const count = elements; // quantidade de cards visíveis
     const nextStart = (start + 1 + length) % length; // wrap para frente
     const newIndexes: CardLayout[] = Array.from(
@@ -49,7 +49,7 @@ function Carousel({ elements = 4 }: CarouselProps) {
   }
   // HTMl
   return (
-    <SwipersButtons forward={aumentar} backward={diminuir}>
+    <SwipersButtons forward={aumentar} backward={diminuir} mode="circles"> 
       <>
         {indexes.map((item, index) => {
           return (

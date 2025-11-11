@@ -1,5 +1,6 @@
 import image1 from '../../assets/Images/img2.jpg';
 import Carousel from '../../components/Carousel/Carousel';
+import Mosaic from '../../components/Mosaic/Mosaic';
 import Slider from '../../components/Slider/Slider';
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
       </div>
       
       <Carousel/>
+      <Mosaic />
     </main>
   );
 }

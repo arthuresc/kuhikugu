@@ -1,6 +1,4 @@
-import { IoIosArrowForward } from 'react-icons/io';
-import { IoIosArrowBack } from 'react-icons/io';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import SwipersButtons from '../SwiperButtons/SwipersButtons';
 
 const images = import.meta.glob('/src/assets/Images/*.jpg');
@@ -10,6 +8,7 @@ function Slider() {
   const imgNumLength = Object.keys(images).length;
   // TODO - Criar os tipos e os objetos que serão construidos apartir das imagens da pasta elas terão o texto a ser exibido, `alt`, link e etc para que seja configurado. E falta os bullets indicando as imagens
   // FOLLOW-ME - Terminado o visual e as funções básicas do componente
+  // REFACTOR - Colocar lógica mais simples e com menos if's
   function changeImageBackward(): void {
     if (imgNum == 0) {
       // console.log('🤖 imgNum', imgNum, 'imgNumLength', imgNumLength, 'verificação: ', imgNum < 0)
