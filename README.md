@@ -2,7 +2,7 @@
 
 Resumo
 - Projeto frontend em React + Vite (TypeScript) com componentes de UI focados em exibição de produtos (Carousel, Mosaic, etc.).
-- Objetivo: componente reutilizáveis que consomem feeds estáticos (cards.json) e APIs, com boas práticas de tipagem, validação e performance.
+- Objetivo: componente reutilizáveis que consomem feeds estáticos (cards.json) para testes mas com pretensão de uso de APIs para retorno dos dados, com boas práticas de tipagem, validação e performance.
 
 Principais funcionalidades
 - Carousel com wrap-around, clones para transição suave e suporte a navegação por botões.
@@ -14,7 +14,6 @@ Tecnologias
 - Vite
 - Tailwind CSS (estilos utilitários)
 - react-icons
-- Recomendado: TanStack Query para chamadas/ cache de API e Zod para validação de schemas
 
 Estrutura (resumo importante)
 - src/
@@ -50,7 +49,7 @@ Scripts úteis (sugestão)
 - build: vite build
 - preview: vite preview
 - lint: eslint .
-- type-check: tsc --noEmit
+- type-check: tsc --noEmit src/*.tsx
 
 Licença
 - MIT
