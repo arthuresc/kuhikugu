@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "title": "Garrafa Térmica 1L",
+      "subTitle": "Descrição curta genérica do produto.",
+      "src": "src/components/Mosaic/Feed/Images/garrafa_termica_1l.webp",
+      "link": "/",
+      "order": 0,
+      "cod": "00001"
+    },
+    {
+      "title": "Garrafa Térmica 500ml",
+      "subTitle": "Descrição curta genérica do produto.",
+      "src": "src/components/Mosaic/Feed/Images/garrafa_termica_500ml.webp",
+      "link": "/",
+      "order": 1,
+      "cod": "00002"
+    },
+    {
+      "title": "Kit Canecas",
+      "subTitle": "Descrição curta genérica do produto.",
+      "src": "src/components/Mosaic/Feed/Images/kit_canecas.webp",
+      "link": "/",
+      "order": 2,
+      "cod": "00003"
+    },
+    {
+      "title": "Agenda 2026",
+      "subTitle": "Descrição curta genérica do produto.",
+      "src": "src/components/Mosaic/Feed/Images/agenda_2026.webp",
+      "link": "/",
+      "order": 3,
+      "cod": "00004"
+    },
+    {
+      "title": "Kit Secretaria",
+      "subTitle": "Descrição curta genérica do produto.",
+      "src": "src/components/Mosaic/Feed/Images/kit_secretaria.webp",
+      "link": "/",
+      "order": 4,
+      "cod": "00005"
+    },
+    {
+      "title": "Agenda Reciclável",
+      "subTitle": "Descrição curta genérica do produto.",
+      "src": "src/components/Mosaic/Feed/Images/agenda_reciclavem.webp",
+      "link": "/",
+      "order": 5,
+      "cod": "00006"
+    },
+    {
+      "title": "Power Bank 10000mA",
+      "subTitle": "Descrição curta genérica do produto.",
+      "src": "src/components/Mosaic/Feed/Images/power_bank_10000ma.webp",
+      "link": "/",
+      "order": 6,
+      "cod": "00007"
+    },
+    {
+      "title": "Estação de Carregamento",
+      "subTitle": "Descrição curta genérica do produto.",
+      "src": "src/components/Mosaic/Feed/Images/estacao_carregamento.webp",
+      "link": "/",
+      "order": 7,
+      "cod": "00008"
+    }
+  ]
+}

@@ -19,7 +19,7 @@ function Slider() {
       setImgNum(imgNum - 1);
     }
   }
-  
+
   function changeImageForward(): void {
     if (imgNum == imgNumLength - 1) {
       // console.log('🤖 imgNum', imgNum, 'imgNumLength', imgNumLength, imgNum == (imgNumLength - 1))
@@ -32,7 +32,11 @@ function Slider() {
   }
   return (
     <>
-      <SwipersButtons forward={changeImageForward} backward={changeImageBackward} wrapper='relative overflow-visible h-[30dvh] sm:h-[40dvh] md:h-[45dvh] lg:h-[50dvh]'>
+      <SwipersButtons
+        forward={changeImageForward}
+        backward={changeImageBackward}
+        wrapper="relative overflow-visible h-[30dvh] sm:h-[40dvh] md:h-[45dvh] lg:h-[65dvh]"
+      >
         <img src={Object.keys(images)[imgNum]} />
       </SwipersButtons>
     </>
@@ -41,5 +45,4 @@ function Slider() {
 
 export default Slider;
 
-
-      // <div className="relative overflow-visible h-[30dvh] sm:h-[40dvh] md:h-[45dvh] lg:h-[50dvh]">
+// <div className="relative overflow-visible h-[30dvh] sm:h-[40dvh] md:h-[45dvh] lg:h-[50dvh]">

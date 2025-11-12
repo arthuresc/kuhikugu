@@ -49,20 +49,29 @@ function Carousel({ elements = 4 }: CarouselProps) {
   }
   // HTMl
   return (
-    <SwipersButtons forward={aumentar} backward={diminuir} mode="circles"> 
-      <>
-        {indexes.map((item, index) => {
-          return (
-            <CarouselCard
-              key={index}
-              image={item.defaultImg}
-              title={item.title}
-              subTitle={item.subTitle}
-            />
-          );
-        })}
-      </>
-    </SwipersButtons>
+    <>
+      <div className="flex flex-col h-[50dvh] justify-around">
+        <div className="">
+          <h3 className="text-5xl font-medium  text-neutral-600 text-center">
+            Novidades
+          </h3>
+        </div>
+        <SwipersButtons forward={aumentar} backward={diminuir} mode="circles">
+          <>
+            {indexes.map((item, index) => {
+              return (
+                <CarouselCard
+                  key={index}
+                  image={item.defaultImg}
+                  title={item.title}
+                  subTitle={item.subTitle}
+                />
+              );
+            })}
+          </>
+        </SwipersButtons>
+      </div>
+    </>
   );
 }
 

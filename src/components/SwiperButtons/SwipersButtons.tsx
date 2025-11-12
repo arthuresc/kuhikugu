@@ -1,5 +1,5 @@
-import { IoIosArrowDropleftCircle } from "react-icons/io"; 
-import { IoIosArrowDroprightCircle } from "react-icons/io"; 
+import { IoIosArrowDropleftCircle } from 'react-icons/io';
+import { IoIosArrowDroprightCircle } from 'react-icons/io';
 import type { ReactElement } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { useState } from 'react';
@@ -19,13 +19,12 @@ function SwipersButtons({
   mode = 'default',
   wrapper,
 }: SwipersButtons) {
-  const [classWrapper, setClassWrapper] = useState(
-    'relative overflow-visible group',
-  );
+  const [classWrapper, setClassWrapper] = useState('relative overflow-visible');
 
   const modeSelector = {
     default: () => {
-      return(<div className="absolute inset-0 pointer-events-none z-20 flex items-center justify-between">
+      return (
+        <div className="absolute inset-0 pointer-events-none z-20 flex items-center justify-between text-3xl">
           <button
             className="group pointer-events-auto h-full mix-blend-overlay hover:bg-black/30 active:bg-black/50 px-2 py-1 transition-opacity duration-200 ease-out"
             onClick={(): void => forward()}
@@ -38,38 +37,41 @@ function SwipersButtons({
           >
             <IoIosArrowForward className="mx-5 text-transparent  group-hover:text-gray-400 group-active:text-gray-400" />
           </button>
-        </div>)
+        </div>
+      );
     },
 
     circles: () => {
       return (
         <div className="absolute inset-0 pointer-events-none z-20 flex items-center justify-between">
           <button
-            className="group pointer-events-auto mix-blend-overlay text-2xl hover:text-3xl px-2 py-1 transition-opacity duration-200 ease-out"
+            className="group pointer-events-auto mix-blend-overlay p-3 text-4xl"
             onClick={(): void => forward()}
           >
-            <IoIosArrowDropleftCircle className=" mx-5 text-transparent group-hover:text-gray-400 group-active:text-gray-400 " />
+            <IoIosArrowDropleftCircle className="mx-5 text-transparent group-hover:text-gray-400 group-active:text-gray-400 transform transition-transform duration-300 ease-out will-change-transform group-hover:scale-120" />
           </button>
           <button
-            className="group pointer-events-auto h-full mix-blend-overlay text-2xl hover:text-3xl px-2 py-1 transition-opacity duration-200 ease-out"
+            className="group pointer-events-auto mix-blend-overlay p-3 text-4xl"
             onClick={(): void => backward()}
           >
-            <IoIosArrowDroprightCircle className="mx-5 text-transparent group-hover:text-gray-400 group-active:text-gray-400" />
+            <IoIosArrowDroprightCircle className="mx-5 text-transparent group-hover:text-gray-400 group-active:text-gray-400 transform transition-transform duration-300 ease-out will-change-transform group-hover:scale-120" />
           </button>
         </div>
       );
     },
-  }[mode]
+  }[mode];
 
   const renderedMode = modeSelector ? modeSelector() : null;
 
   return (
-    <div className={wrapper ?? classWrapper}>
-      <div className="group flex flex-row justify-around items-end-safe transition-transform transition-all duration-700 ease-in-out">
-        {children}
+    <>
+      <div className={wrapper ?? classWrapper}>
+        <div className="group flex flex-row justify-around items-end-safe transition-transform transition-all duration-700 ease-in-out">
+          {children}
+        </div>
+        {renderedMode}
       </div>
-      {renderedMode}
-    </div>
+    </>
   );
 }
 

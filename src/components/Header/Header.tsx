@@ -5,8 +5,8 @@ import { BiSearch } from 'react-icons/bi';
 
 function Header() {
   return (
-    <header className="w-full bg-white text-neutral-800 h-[8dvh] md:h-[5dvh]">
-      <div className="flex items-center justify-between px-4 py-3">
+    <header className="w-full bg-white text-neutral-800 h-[8dvh] md:h-[8dvh] flex">
+      <div className="w-full flex items-center justify-between px-4 py-3">
         <a href="/" className="flex items-center gap-3">
           <img
             src="src/assets/Logos/BL/BL.webp"
@@ -15,7 +15,7 @@ function Header() {
           />
         </a>
         <form
-          className="flex justify-center items-center border border-neutral-500 rounded-lg px-2 py-1 w-2/5 md:w-1/2 max-w-md"
+          className="flex justify-center items-center border border-neutral-200 focus-within:border-neutral-400 active:border-neutral-400 rounded-lg px-2 py-1 w-2/5 md:w-1/2 max-w-md"
           role="search"
           action=""
         >
