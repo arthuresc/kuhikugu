@@ -40,7 +40,7 @@ function Home() {
         </div>
       </div>
 
-      <Carousel title="Novidades"/>
+      <Carousel title="novidades"/>
       <Mosaic />
     </main>
   );

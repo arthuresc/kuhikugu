@@ -10,11 +10,13 @@ import SwipersButtons from '../SwiperButtons/SwipersButtons';
 
 interface CarouselProps {
   elements?: number;
+  title?: string | boolean;
+  background?: boolean;
 }
 
 const products: CardLayout[] = [...cards.products];
 
-function Carousel({ elements = 4 }: CarouselProps) {
+function Carousel({ title, elements = 4, background }: CarouselProps) {
   const [start, setStart] = useState(0);
   const [indexes, setIndexes] = useState<CardLayout[]>([
     ...products.slice(0, 4),
@@ -50,10 +52,10 @@ function Carousel({ elements = 4 }: CarouselProps) {
   // HTMl
   return (
     <>
-      <div className="flex flex-col h-[50dvh] justify-around">
+      <div className="flex flex-col h-[55dvh] justify-around">
         <div className="">
-          <h3 className="text-5xl font-medium  text-neutral-600 text-center">
-            Novidades
+          <h3 className="text-5xl font-medium text-neutral-600 text-center capitalize">
+            {title}
           </h3>
         </div>
         <SwipersButtons forward={aumentar} backward={diminuir} mode="circles">

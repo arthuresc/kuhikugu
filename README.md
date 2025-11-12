@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+# Kuhikugu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Resumo
+- Projeto frontend em React + Vite (TypeScript) com componentes de UI focados em exibição de produtos (Carousel, Mosaic, etc.).
+- Objetivo: componente reutilizáveis que consomem feeds estáticos (cards.json) e APIs, com boas práticas de tipagem, validação e performance.
 
-Currently, two official plugins are available:
+Principais funcionalidades
+- Carousel com wrap-around, clones para transição suave e suporte a navegação por botões.
+- Mosaic responsivo com imagens centralizadas, efeito "hero" (zoom/rotate) e overflow oculto.
+- Cards carregados por JSON (src/components/*/Feed/cards.json) e possibilidade de migrar para chamadas API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tecnologias
+- React + TypeScript
+- Vite
+- Tailwind CSS (estilos utilitários)
+- react-icons
+- Recomendado: TanStack Query para chamadas/ cache de API e Zod para validação de schemas
 
-## React Compiler
+Estrutura (resumo importante)
+- src/
+  - components/
+    - Carousel/
+      - Carousel.tsx
+      - Feed/cards.json
+      - Feed/Images/Produtos/...
+      - Utils/CarouselCard.tsx
+    - Mosaic/
+      - Mosaic.tsx
+      - Feed/cards.json
+      - Feed/Images/...
+    - SwiperButtons/SwipersButtons.tsx
+  - features/ (opcional por feature)
+  - services/
+    - api.ts (cliente HTTP centralizado) — recomendado
+  - types/ (tipos e interfaces)
+  - style/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Instalação e execução
+1. Instalar dependências
+   npm install
+2. Rodar em desenvolvimento
+   npm run dev
+3. Build de produção
+   npm run build
+4. Servir build
+   npm run preview
 
-## Expanding the ESLint configuration
+Scripts úteis (sugestão)
+- dev: vite
+- build: vite build
+- preview: vite preview
+- lint: eslint .
+- type-check: tsc --noEmit
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Licença
+- MIT
