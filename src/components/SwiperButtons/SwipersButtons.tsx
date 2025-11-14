@@ -26,13 +26,13 @@ function SwipersButtons({
       return (
         <div className="absolute inset-0 pointer-events-none z-20 flex items-center justify-between text-3xl">
           <button
-            className="group pointer-events-auto h-full mix-blend-overlay hover:bg-black/30 active:bg-black/50 px-2 py-1 transition-opacity duration-200 ease-out"
+            className="group pointer-events-auto h-full mix-blend-overlay hover:bg-black/30 active:bg-black/50 px-2 py-2 transition-opacity duration-200 ease-out"
             onClick={(): void => forward()}
           >
             <IoIosArrowBack className="mx-5 text-transparent group-hover:text-gray-400 group-active:text-gray-400" />
           </button>
           <button
-            className="group pointer-events-auto h-full mix-blend-overlay hover:bg-black/30 active:bg-black/50 px-2 py-1"
+            className="group pointer-events-auto h-full mix-blend-overlay hover:bg-black/30 active:bg-black/50 px-2 py-2"
             onClick={(): void => backward()}
           >
             <IoIosArrowForward className="mx-5 text-transparent  group-hover:text-gray-400 group-active:text-gray-400" />

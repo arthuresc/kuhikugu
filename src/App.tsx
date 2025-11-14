@@ -12,7 +12,7 @@ function App() {
         <Header />
         <Home />
         {/* resolver o sidebar depois */}
-        <footer className="bg-cyan-300 h-[40dvh]">Footer</footer>
+        <footer className="bg-neutral-900 h-[40dvh]">Footer</footer>
       </div>
     </>
   );

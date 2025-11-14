@@ -4,7 +4,7 @@ function CarouselCard({image, title, subTitle}) {
 
   console.log(typeof image)
   return (
-      <div className="bg-orange-300 flex justify-center w-[30dvh] px-3 py-3 text-center leading-6 ">
+      <div className="bg-neutral-100 flex justify-center w-[30dvh] px-3 py-3 text-center leading-6 ">
         <div className="">
           <img src={image}/>
           <div className="flex flex-col py-2">

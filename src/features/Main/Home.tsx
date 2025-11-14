@@ -9,39 +9,41 @@ import Slider from '../../components/Slider/Slider';
 
 function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden flex flex-col justify-between align-baseline">
       <div className="overflow-hidden">
         <Slider />
       </div>
-      <div className="h-[15dvh] flex flex-row items-center-safe justify-around flex">
+      <div className="h-[15dvh] flex flex-row items-center-safe justify-around flex my-3 michael trailerbg-neutral-800">
         <div className=" h-[50%] w-[20%] flex items-center">
-          <BiTargetLock className="text-[6dvh] text-neutral-400 w-[25%]" />
-          <div className="text-neutral-500 text-2xl w-[85%]">
+          <BiTargetLock className="text-[6dvh] lg:text-[4.5dvh] text-neutral-400 w-[25%]" />
+          <div className="text-neutral-500 text-lg w-[85%]">
             Procure os presentes que a sua campanha precisa
           </div>
         </div>
         <div className=" h-[50%] w-[20%] flex items-center">
-          <BiCart className="text-[6dvh] text-neutral-400 w-[25%]" />
-          <div className="text-neutral-500 text-2xl w-[85%]">
+          <BiCart className="text-[6dvh] lg:text-[4.5dvh] text-neutral-400 w-[25%]" />
+          <div className="text-neutral-500 text-lg w-[85%]">
             Adicione ao carrinho o que você pretende orçar
           </div>
         </div>
         <div className=" h-[50%] w-[20%] flex items-center">
-          <BsSend className="text-[6dvh] text-neutral-400 w-[25%]" />
-          <div className="text-neutral-500 text-2xl w-[85%]">
+          <BsSend className="text-[6dvh] lg:text-[4.5dvh] text-neutral-400 w-[25%]" />
+          <div className="text-neutral-500 text-lg w-[85%]">
             Feche o seu orçamento que ele será enviado para nós
           </div>
         </div>
         <div className=" h-[50%] w-[20%] flex items-center">
-          <MdOutlineMarkEmailRead className="text-[6dvh] text-neutral-400 w-[25%]" />
-          <div className="text-neutral-500 text-2xl w-[85%]">
+          <MdOutlineMarkEmailRead className="text-[6dvh] lg:text-[4.5dvh] text-neutral-400 w-[25%]" />
+          <div className="text-neutral-500 text-lg w-[85%]">
             Você irá receber o orçamento por email
           </div>
         </div>
       </div>
 
-      <Carousel title="novidades"/>
       <Mosaic />
+      <Carousel title="novidades"/>
+      <img className="w-full" src="https://placehold.co/1920x200"/>
+      <Carousel title="famosinhos"/>
     </main>
   );
 }
