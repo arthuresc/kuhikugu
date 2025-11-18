@@ -1,5 +1,6 @@
 import { RxAvatar } from 'react-icons/rx';
 import TextField from '../TextField/TextField';
+import { Link } from '@tanstack/react-router';
 
 
 function Header() {
@@ -23,7 +24,7 @@ function Header() {
           <RxAvatar className="text-3xl text-neutral-800" />
         </button>
       </div>
-      <nav className="bg-lime-300 "></nav>
+      <nav className="bg-lime-300 "><Link to="/produto">Produto</Link></nav>
     </header>
   );
 }
