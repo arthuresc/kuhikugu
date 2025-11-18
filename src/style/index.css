@@ -16,6 +16,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  h1 {
+    @apply text-2xl
+  }
+
+  h2 {
+    @apply text-xl text-neutral-600
+  }
 }
 
 /* tailwind config breaking points */
