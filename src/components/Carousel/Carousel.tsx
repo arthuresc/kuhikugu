@@ -52,7 +52,7 @@ function Carousel({ title, elements = 4, background }: CarouselProps) {
   // HTMl
   return (
     <>
-      <div className="flex flex-col h-[70dvh] justify-around my-10 lg:mx-16">
+      <div className="flex flex-col h-[40dvh] justify-around my-10 lg:mx-16">
         <div className="">
           <h3 className="text-5xl lg:text-6xl font-medium text-neutral-600 text-center capitalize">
             {title}
