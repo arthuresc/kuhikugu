@@ -37,7 +37,7 @@ const indexRoute = createRoute({
 });
 const produtoRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: '/produto',
+  path: '/produtos',
   component: Produto,
 });
 
