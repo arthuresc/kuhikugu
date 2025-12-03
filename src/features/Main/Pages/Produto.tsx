@@ -1,43 +1,54 @@
 import { useState } from 'react';
 import Button from '../../../components/Button/Button';
 import { useLoaderData } from '@tanstack/react-router';
+import axios from 'axios';
 
 function Produto() {
-
   // const [ products, setProducts ] = useState([])
 
   // const apiUrl = 'http://127.0.0.1:8000/produto'
 
-  async function fetchData() {
-    try {
-        const res = await fetch('http://127.0.0.1:8000/produtos/', {
-            method: 'GET',
-            headers: { 'Accept': 'application/json' },
-            mode: 'cors' // opcional no navegador
-        });
+  // async function fetchData() {
+  //   try {
+  //     const teste = await axios.get('http://127.0.0.1:8000/produtos/', {
+  //       allowAbsoluteUrls: true,
+  //     });
 
-        const test = useLoaderData({ from: '/produtos' })
+  //     console.log(teste);
+  //   } catch (err) {
+  //     console.error('Erro ao buscar produto:', err);
+  //     throw err;
+  //   }
+  // }
 
-        console.log(test, 'Teste')
-        
-        if (!res.ok) throw new Error(`HTTP error ${res.status}`);
-        const json = await res.json();
-        console.log(json)
-        // retorna o body tal como sua API devolve
-        return json.body;
-    } catch (err) {
-        console.error('Erro ao buscar produto:', err);
-        throw err;
-    }
+  const axiosConf = {
+    allowAbsoluteUrls: true,
+    baseURL: 'http://127.0.0.1:8000',
+    headers: {}
+  };
+
+  function fetchData() {
+    let result;
+    axios
+      .get('/produtos', axiosConf)
+      .then((item) => {
+        console.log(item);
+        result = item;
+      })
+      .catch((e) => {
+        console.log(e)
+      });
+
+      return result;
   }
 
-  const data = fetchData()
+  const data = fetchData();
 
   // data.then((item) => {
   //   console.log(item, '😃')
   // })
 
-  // console.log('', '🧅')
+  console.log(data, '🧅');
 
   return (
     <>
@@ -51,8 +62,7 @@ function Produto() {
         <div className="px-[5dvw] py-[5dvh] *:mt-[1rem">
           <h1>Produto</h1>
           <h2>Sub titulo do produto</h2>
-          <p className="line-clamp-12">
-          </p>
+          <p className="line-clamp-12"></p>
           <Button type="warning" title="Adicionar ao orçamento" />
         </div>
       </div>
