@@ -16,8 +16,8 @@ export default defineConfig({
   ],
   // TODO Alias por enquanto não tem muita vantagem, implementar corretamente ou configurar o root melhor
   // resolve: {
-  //   alias: [
-  //     { find: '@', replacement: 'src' }
-  //   ]
+    // alias: [
+    //   { find: '@', replacement: 'src' }
+    // ]
   // },
 });

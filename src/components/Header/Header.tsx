@@ -1,8 +1,20 @@
 import { RxAvatar } from 'react-icons/rx';
 import TextField from '../TextField/TextField';
 import { Link } from '@tanstack/react-router';
+import { useNotification } from '../Notifications/NotificationsContext';
 
 function Header() {
+
+  const { criaNotification } = useNotification()
+
+  function deuMerda() {
+    criaNotification(
+      'Deeeu meeerda',
+      'Então deu merda em geral e logo logo vai feder',
+      'danger'
+    )
+  }
+
   return (
     <header className="w-full bg-white text-neutral-800 h-[8dvh] md:h-[8dvh] flex flex-col justify-between">
       <div className="w-full flex items-center justify-between px-4 py-3">
@@ -17,6 +29,7 @@ function Header() {
         <button
           aria-label="Conta do usuário"
           className="rounded-full overflow-hidden w-9 h-9"
+          onClick={deuMerda}
         >
           {/* //FIXME Provisório o icone */}
           {/* <img src="/path/to/avatar.jpg" alt="Avatar do usuário" /> */}
@@ -31,8 +44,8 @@ function Header() {
         <Link className="" to="/">
           Home
         </Link>
-        <Link className="" to="/produto">
-          Produto
+        <Link className="" to="/produtos">
+          Produtos
         </Link>
       </nav>
     </header>
