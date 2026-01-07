@@ -7,14 +7,13 @@ import {
   createRouter,
 } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
+import routes from './routes/routes.ts';
 
 // import './styles.css'
 import './style/index.css';
 import reportWebVitals from './reportWebVitals.ts';
 
 import Header from './components/Header/Header';
-import Home from './features/Main/Home.tsx';
-import ProductList from './features/Main/Pages/Produtos/List.tsx';
 import { NotificationProvider } from './components/Notifications/NotificationsContext.tsx';
 
 const rootRoute = createRootRoute({
@@ -25,23 +24,12 @@ const rootRoute = createRootRoute({
       {/* resolver o sidebar depois */}
       <Outlet />
       <TanStackRouterDevtools />
-      <footer className="bg-neutral-900 h-[40dvh]">Footer</footer>
+      <footer className="bg-neutral-900 h-[40dvh] mt-24">Footer</footer>
     </>
   ),
 });
-// REFACTOR // FIXME - Retirar o router de dentro do main.tsx
-const indexRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/',
-  component: Home,
-});
-const produtoRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/produtos',
-  component: ProductList,
-});
 
-const routeTree = rootRoute.addChildren([indexRoute, produtoRoute]);
+const routeTree = rootRoute.addChildren([...routes(rootRoute)]);
 
 const router = createRouter({
   routeTree,
@@ -51,6 +39,8 @@ const router = createRouter({
   defaultStructuralSharing: true,
   defaultPreloadStaleTime: 0,
 });
+
+// REFACTOR // FIXME - Retirar o router de dentro do main.tsx
 
 function App() {
   return (

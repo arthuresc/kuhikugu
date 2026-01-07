@@ -1,11 +1,55 @@
-// import Notifications from "../../../../components/Notifications/Notifications"
+import Card from "./components/Card"
 
 function ProductList() {
 
   return (
-    <div>
-      {/* <Notifications /> */}
-    </div>
+    <section className="flex justify-around flex-row gap-10 flex-wrap w-full h-full">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </section>
   )
 }
 

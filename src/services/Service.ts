@@ -1,5 +1,6 @@
 interface Service {
   url: string;
+  get: (cb: Function) => void
 }
 
 interface AxiosHeaders {
@@ -20,8 +21,15 @@ const AxiosConfig = {
   },
 };
 
+const URL: string = 'http://127.0.0.1:8000';
+
 const Service: Service = {
-  url: 'http://127.0.0.1:8000',
+  url: URL,
+  get: (cb) => {
+    if (cb) {
+      cb()
+    }
+  },
 };
 
 const { url } = Service;

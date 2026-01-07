@@ -4,6 +4,7 @@ import { useLoaderData } from '@tanstack/react-router';
 import axios from 'axios';
 
 function Produto() {
+  console.log('Entrou na view de produto')
   // const [ products, setProducts ] = useState([])
 
   // const apiUrl = 'http://127.0.0.1:8000/produto'
