@@ -1,58 +1,28 @@
 import { useEffect, useState } from 'react';
 import Button from '../../../../components/Button/Button';
-import { useLoaderData } from '@tanstack/react-router';
-import axios from 'axios';
-
+import {get} from '../../../../services/Service'
 function Produto() {
   console.log('Entrou na view de produto')
-  // const [ products, setProducts ] = useState([])
-
-  // const apiUrl = 'http://127.0.0.1:8000/produto'
-
-  // async function fetchData() {
-  //   try {
-  //     const teste = await axios.get('http://127.0.0.1:8000/produtos/', {
-  //       allowAbsoluteUrls: true,
-  //     });
-
-  //     console.log(teste);
-  //   } catch (err) {
-  //     console.error('Erro ao buscar produto:', err);
-  //     throw err;
-  //   }
-  // }
-
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState({});
 
 
 
-  // let result: [];
-
-  // function fetchData() {
-  //   axios
-  //     .get('/produtos', axiosConf)
-  //     .then((item) => {
-  //       console.log(item, '😃');
-  //       setProducts(item.data);
-  //     })
-  //     .catch((e) => {
-  //       console.log(e, '⁉️');
-  //     });
-  // }
 
   useEffect(() => {
-    // fetchData();
-    // let ignore: boolean = false;
+    const fetchData = async () => {
+      try {
+        let result = await get('/produtos/7')
 
-    axios
-      .get('/produtos', axiosConf)
-      .then((item) => {
-        console.log(item, '😃');
-        setProducts(item.data);
-      })
-      .catch((e) => {
-        console.log(e, '⁉️');
-      });
+        console.log(result, '⛄')
+        return result;
+      }
+      catch(e) {
+        console.error(e, 'ERRO NO SISTEMA ALGUEM DISMAMO')
+      }
+    }
+
+    fetchData()
+    
   }, []);
 
   return (
@@ -65,10 +35,10 @@ function Produto() {
         />
         {/* bloco de  */}
         <div className="px-[5dvw] py-[5dvh] *:mt-[1rem">
-          {products.map((item) => {
+          {/* {products.map((item) => {
             console.log(item);
             return <p>{item.nome}</p>;
-          })}
+          })} */}
           <h1>Produto</h1>
           <h2>Sub titulo do produto</h2>
           <p className="line-clamp-12"></p>
